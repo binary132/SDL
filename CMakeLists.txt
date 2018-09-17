@@ -1845,3 +1845,9 @@ if(NOT TARGET uninstall)
   add_custom_target(uninstall
       COMMAND ${CMAKE_COMMAND} -P ${CMAKE_CURRENT_BINARY_DIR}/cmake_uninstall.cmake)
 endif()
+
+find_path(SDL2_INCLUDE_DIR
+  "include/SDL.h"
+  PATHS ${CMAKE_CURRENT_LIST_DIR}
+  PATH_SUFFIXES "include"
+)
